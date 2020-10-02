@@ -4,7 +4,7 @@
     document.getElementById("ne-sw-dash-button").onchange = function () { hideImage(this); };
     document.getElementById("ew-dash-button").onchange = function () { hideImage(this); };
     document.getElementById("nails-button").onchange = function () {
-        document.getElementById("nails-container").style.display = element.checked ? null : "none";
+        document.getElementById("nails-container").style.display = this.checked ? null : "none";
     };
     document.getElementById("ifrit-arena-button").onchange = function () { hideImage(this); };
 
