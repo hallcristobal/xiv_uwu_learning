@@ -90,18 +90,5 @@
         var randomPosition = Math.floor(Math.random() * 8);
         generateMarkersFromStartingPosition(randomPosition);
     }
-
-    document.getElementById("placeAllNailsButton").onclick = function () {
-        /*
-        <div class="image-overlay nail-marker" id="w-nail"
-            style="background: url(./Ifrit_Charges/NailMarker.png); background-size: 100%; z-index: 10; left: 125px; top: 250px;">
-        </div>
-        */
-        var nailsContainer = document.getElementById("nails-container");
-        nailsContainer.innerHTML = "";
-        for (var i = 0; i < 8; i++) {
-            nailsContainer.appendChild(createNailElement(i));
-        }
-    }
 })();
 
