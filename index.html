@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        .image-container {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            margin: 5px;
+        }
+
+        div.nail-marker {
+            width: 15px;
+            height: 15px;
+        }
+
+        .image-overlay {
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .left-sidebar {
+            height: 100%;
+            width: 300px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(187, 187, 187);
+            overflow-x: hidden;
+            padding: 10px;
+            padding-top: 20px;
+        }
+
+        .right-sidebar {
+            /*side nav + padding*/
+            margin-left: 320px;
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="input-container">
+                <input name="NwSeDash" id="nw-se-dash-button" type="checkbox"></input>
+                <label for="nw-se-dash-button">NW-SE Dash</label>
+            </div>
+            <div class="input-container">
+                <input name="NsDash" id="ns-dash-button" type="checkbox"></input>
+                <label for="ns-dash-button">N-S Dash</label>
+            </div>
+            <div class="input-container">
+                <input name="NeSwDash" id="ne-sw-dash-button" type="checkbox"></input>
+                <label for="ne-sw-dash-button">NE-SW Dash</label>
+            </div>
+            <div class="input-container">
+                <input name="EwDash" id="ew-dash-button" type="checkbox"></input>
+                <label for="ew-dash-button">EW Dash</label>
+            </div>
+            <div class="input-container">
+                <input name="Nails" id="nails-button" type="checkbox"></input>
+                <label for="nails-button">Nails</label>
+            </div>
+            <div class="input-container">
+                <input disabled checked name="IfritArena" id="ifrit-arena-button" type="checkbox"></input>
+                <label for="ifrit-arena-button">Arena</label>
+            </div>
+            <div class="input-container">
+                <input type="button" id="placeNailsButton" value="Place Nails">
+            </div>
+            <div class="input-container">
+                <input type="button" id="placeAllNailsButton" value="Place All Nails">
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <div class="image-container">
+                <div class="image-overlay" id="nw-se-dash"
+                    style="background: url(./Ifrit_Charges/NW_SE_Charge.png); background-size: 100%; z-index: 50; display: none;">
+                </div>
+                <div class="image-overlay" id="ns-dash"
+                    style="background: url(./Ifrit_Charges/NS_Charge.png); background-size: 100%; z-index: 40; display: none;">
+                </div>
+                <div class="image-overlay" id="ne-sw-dash"
+                    style="background: url(./Ifrit_Charges/NE_SW_Charge.png); background-size: 100%; z-index: 30; display: none;">
+                </div>
+                <div class="image-overlay" id="ew-dash"
+                    style="background: url(./Ifrit_Charges/EW_Charge.png); background-size: 100%; z-index: 20; display: none;">
+                </div>
+                <div class="image-overlay" id="nails"
+                    style="background: url(./Ifrit_Charges/Nails.png); background-size: 100%; z-index: 10; display: none;">
+                </div>
+                <span id="nails-container">
+                </span>
+                <div class="image-overlay" id="ifrit-arena"
+                    style="background: url(./Ifrit_Charges/Ifrit_Arena.png); background-size: 100%; z-index: 1;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
